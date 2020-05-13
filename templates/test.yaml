@@ -28,7 +28,7 @@ spec:
         path: /app/main.py
         raw:
           data: |
-            from test import test
+            from test import linear_regression
             linear_regression()
           #X_train = {{inputs.parameters.X-train}}
           #y_train = {{inputs.parameters.y-train}}
