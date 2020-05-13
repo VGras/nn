@@ -17,8 +17,8 @@ spec:
       parameters:
 
       # The `command` parameter is required because that is what is run by `generic-task`.
-      - name: X
-      - name: y
+      - name: X-train
+      - name: y-train
       - name: command
         value: python3 main.py
 
@@ -30,10 +30,10 @@ spec:
           data: |
             from test import test
             
-            X = {{inputs.parameters.X}}
-            y = {{inputs.parameters.y}}
+            X_train = {{inputs.parameters.X-train}}
+            y_train = {{inputs.parameters.y-train}}
             
-            linear_regression(X, y)
+            linear_regression(X_train, y_train)
 
     # This section is where output artifacts are listed. They must be listed here, or else they will get deleted when the template completes. They must be under the `app` directory in order to be saved.
     outputs:
