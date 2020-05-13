@@ -17,8 +17,8 @@ spec:
       parameters:
 
       # The `command` parameter is required because that is what is run by `generic-task`.
-      - name: var-1
-      - name: var-2
+      - name: X-train
+      - name: y-train
       - name: command
         value: python3 main.py
 
@@ -29,9 +29,9 @@ spec:
         raw:
           data: |
             from orquestra import run_test
-            var_1 = {{inputs.parameters.var-1}}
-            var_2 = {{inputs.parameters.var-2}}
-            run_test(var_1, var_2)
+            X_train = {{inputs.parameters.X-train}}
+            y_train =  {{inputs.parameters.y-train}}
+            run_test(X_train, y_train)
 
     # This section is where output artifacts are listed. They must be listed here, or else they will get deleted when the template completes. They must be under the `app` directory in order to be saved.
     outputs:
