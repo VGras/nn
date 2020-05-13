@@ -39,4 +39,4 @@ spec:
     outputs:
       artifacts:
       - name: test
-        path: /app/test.json
+        path: /app/res.json
