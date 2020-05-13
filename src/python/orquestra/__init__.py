@@ -1,1 +1,1 @@
-.orquestra_test import *
+from .orquestra_test import *
