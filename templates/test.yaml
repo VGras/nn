@@ -28,7 +28,7 @@ spec:
         path: /app/main.py
         raw:
           data: |
-            from orquestra import orquestra_test
+            from orquestra import run_test
             var_1 = {{inputs.parameters.var-1}}
             var_2 = {{inputs.parameters.var-2}}
             run_test(var_1, var_2)
