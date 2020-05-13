@@ -1,7 +1,7 @@
 import setuptools
 
 setuptools.setup(
-    name                            = "test",
+    name                            = "orquestra",
     packages                        = setuptools.find_packages(where = "python"),
     package_dir                     = {
         "" : "python"
