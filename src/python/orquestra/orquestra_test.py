@@ -1,8 +1,15 @@
 import json
+from sklearn.linear_model import LinearRegression
 
-def run_test(var_1, var_2):
+def run_test(X_train, y_train):
   
-  res = {'var_1': var_1, 'var_2': var_2}
+  lr = LinearRegression().fit(X_train, y_train)
+  res = {}
+  res['X_train'] = X_train
+  res['y_train'] = y_train
+  res['y_pred'] = lr.predict(X_train).tolist()
+  res['coef'] = lr.coef_.tolist()
+  res['intercept'] = lr.intercept_
   res['schema'] = "test"
   
   with open("results.json",'w') as f:
